@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a6167c5-6ef0-435e-9e72-977a328d813c" name="Changes" comment="HA-1">
-      <change afterPath="$PROJECT_DIR$/OReL/HA2_gridworld.py" afterDir="false" />
+    <list default="true" id="2a6167c5-6ef0-435e-9e72-977a328d813c" name="Changes" comment="HA2 file added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OReL/HA-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/OReL/HA-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OReL/HA2/HA2_FTL_and_Hedge.py" beforeDir="false" afterPath="$PROJECT_DIR$/OReL/HA2/HA2_FTL_and_Hedge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NicolaiBraadPedersen"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/NicolaiBraadPedersen/OReL2026",
+    "accountId": "5019b660-76ee-4e29-b741-40f5ff507157"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -41,6 +52,8 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Assignment 1.executor": "Run",
     "Python.HA-1.executor": "Debug",
+    "Python.HA2_FTL_and_Hedge.executor": "Run",
+    "Python.HA2_gridworld.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -61,6 +74,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nicol\PycharmProjects\PythonProject\OReL" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicol\PycharmProjects\PythonProject\OReL\HA2" />
+      <recent name="C:\Users\nicol\PycharmProjects\PythonProject\OReL\HA-1" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -78,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770710952574</updated>
       <workItem from="1770835508978" duration="2034000" />
-      <workItem from="1770837622641" duration="5353000" />
+      <workItem from="1770837622641" duration="21899000" />
     </task>
     <task id="LOCAL-00001" summary="HA-1">
       <option name="closed" value="true" />
@@ -96,26 +113,54 @@
       <option name="project" value="LOCAL" />
       <updated>1770840184328</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="HA-1">
+      <option name="closed" value="true" />
+      <created>1770974190459</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770974190459</updated>
+    </task>
+    <task id="LOCAL-00004" summary="HA2 file added">
+      <option name="closed" value="true" />
+      <created>1770977162824</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770977162824</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HA-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="HA-1" />
+    <MESSAGE value="HA2 file added" />
+    <option name="LAST_COMMIT_MESSAGE" value="HA2 file added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/OReL/HA-1.py</url>
+          <url>file://$PROJECT_DIR$/OReL/HA1/HA-1.py</url>
           <line>62</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/OReL/HA-1.py</url>
+          <url>file://$PROJECT_DIR$/OReL/HA1/HA-1.py</url>
           <line>46</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
@@ -123,6 +168,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject$HA2_gridworld.coverage" NAME="HA2_gridworld Coverage Results" MODIFIED="1770974325550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL/HA2" />
+    <SUITE FILE_PATH="coverage/PythonProject$HA2_FTL_and_Hedge.coverage" NAME="HA2_FTL_and_Hedge Coverage Results" MODIFIED="1770991265144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL/HA2" />
     <SUITE FILE_PATH="coverage/PythonProject$HA_1.coverage" NAME="HA-1 Coverage Results" MODIFIED="1770838408506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL" />
     <SUITE FILE_PATH="coverage/PythonProject$Assignment_1.coverage" NAME="Assignment 1 Coverage Results" MODIFIED="1770839773353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL" />
   </component>
