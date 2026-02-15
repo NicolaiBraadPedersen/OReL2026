@@ -193,7 +193,7 @@ def PI(env, gamma = 0.9):
 			policy1 = np.zeros(env.nS, dtype=int)
 
 
-def
+def VI(env, gamma)
 
 
 
