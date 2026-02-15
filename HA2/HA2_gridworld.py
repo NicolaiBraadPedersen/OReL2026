@@ -3,6 +3,7 @@
 # This code is proposed as a reference solution for various exercises of Home Assignements for the OReL course in 2024.
 # This solution is tailored for simplicity of understanding and is in no way optimal, nor the only way to implement the different elements!
 import numpy as np
+import pandas as pd
 
 
 # A simple 4-room gridworld implementation with a grid of 7x7 for a total of 20 states (the walls do not count!).
@@ -185,7 +186,7 @@ def PI(env, gamma = 0.9):
 
 		# If the policy did not change or the change was due to machine limitation in numerical values return the result.	
 		if test or (max(Vdiff) < 10**(-12)):
-			return niter, policy1
+			return niter, policy1, V1
 		else:
 			policy2 = policy0
 			policy0 = policy1
@@ -209,15 +210,15 @@ def display_4room_policy(policy):
 		temp = []
 		for j in range(7):
 			if map[i][j] == -1:
-				temp.append("Wall ")
+				temp.append("$\\blacksquare$")
 			elif policy[map[i][j]] == 0:
-				temp.append(" Up  ")
+				temp.append("$\\uparrow$")
 			elif policy[map[i][j]] == 1:
-				temp.append("Right")
+				temp.append("$\\rightarrow$")
 			elif policy[map[i][j]] == 2:
-				temp.append("Down ")
+				temp.append("$\\downarrow$")
 			elif policy[map[i][j]] == 3:
-				temp.append("Left ")
+				temp.append("$\\leftarrow$")
 		
 		res.append(temp)
 
@@ -229,5 +230,12 @@ def display_4room_policy(policy):
 
 # Run PI on the environment with gamma = 0.95 and print the result.
 env = Four_Room()
-_, pi = PI(env, 0.95)
-print(display_4room_policy(pi))
+_, pi, Value_opt = PI(env, 0.97)
+Value_opt = np.array(Value_opt)
+#print(_,display_4room_policy(pi),Value_opt)
+
+Value_opt_mapped = pd.DataFrame([[Value_opt[cell] if cell != -1 else "$\\blacksquare$" for cell in row] for row in env.map])
+print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
+
+display_4room_policy_df = pd.DataFrame(display_4room_policy(pi))
+print(display_4room_policy_df.to_latex( index=False))
