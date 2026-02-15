@@ -193,6 +193,9 @@ def PI(env, gamma = 0.9):
 			policy1 = np.zeros(env.nS, dtype=int)
 
 
+def
+
+
 
 # A naive function to output a readble matrix from a policy on the 4-room environment.
 def display_4room_policy(policy):
