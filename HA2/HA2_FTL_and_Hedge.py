@@ -35,30 +35,29 @@ def run_algo(mu, T, func):
 def run_algo_newx(mu, T, func):
     loss = np.zeros(2)
     regret = np.zeros(T)
+    loss_realized = 0
 
     mu_0 = mu
     mu_1 = 1-mu
-    delta = np.abs(mu_0-mu_1)
-    opt = np.argmin([mu_0,mu_1])
 
     for t in range(T):
         a_t = func(loss, K=2, T=T, t=t)
 
-        if t >= T/2 - 1 :
-            x_t = 0
+        if t % 2 == 0:
+            x_t = np.random.binomial(1, 0.5)
         else:
-            x_t = 1
+            x_t = np.abs(x_t-1)
 
         if x_t == a_t:
             loss[~a_t] += 1
         else:
             loss[a_t] += 1
+            loss_realized += 1
         #print(loss)
 
-        if a_t != opt:
-            regret[t] = delta
+        regret[t] = loss_realized - np.min(loss)
 
-    return np.cumsum(regret)
+    return regret
 
 def FTL(loss, K, T, t):
     return np.argmin(loss)
@@ -143,7 +142,7 @@ for mu in mu_0:
     plt.legend()
     plt.grid(True)
     plt.xlabel('T')
-    plt.ylabel('Pseudo-regret')
+    plt.ylabel('Regret')
     plt.title(f'Hedge vs FTL | mu = {mu} | New x')
     plt.savefig(
         f'C:\\Users\\nicol\\OneDrive - University of Copenhagen\\Desktop\\4 år\\OReL\\HA2\\Hedge vs FTL {mu} new.png')

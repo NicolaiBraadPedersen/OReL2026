@@ -193,8 +193,29 @@ def PI(env, gamma = 0.9):
 			policy1 = np.zeros(env.nS, dtype=int)
 
 
-def VI(env, gamma):
-	return env
+def VI(env, gamma, eps = 10**(-6)):
+	policy = np.zeros(env.nS, dtype=int)
+	V0 = np.zeros(env.nS)
+	V1 = np.zeros(env.nS)
+	niter = 0
+
+	# The main loop of the PI algorithm.
+	while True:
+		niter += 1
+
+		for s in range(env.nS):
+			for a in range(env.nA):
+				temp = env.R[s, a] + gamma * sum([u * p for (u, p) in zip(V0, env.P[s, a])])
+				if (a == 0) or (temp > V1[s]):
+					V1[s] = temp
+					policy[s] = a
+
+		Vdiff = [V1[i] - V0[i] for i in range(env.nS)]
+		# If the policy did not change or the change was due to machine limitation in numerical values return the result.
+		if (max(Vdiff) < eps*(1-gamma)/(2*gamma)):
+			return niter, policy, V1
+		else:
+			V0 = V1.copy()
 
 
 
@@ -228,14 +249,17 @@ def display_4room_policy(policy):
 
 	return np.array(res)
 
-	
+
 
 
 
 # Run PI on the environment with gamma = 0.95 and print the result.
 env = Four_Room()
-_, pi, Value_opt = PI(env, 0.97)
+n_, pi, Value_opt = PI(env, 0.97)
+n_VI, pi_VI, Value_opt_VI = VI(env, 0.97)
+n_VI_new, pi_VI_new, Value_opt_VI_new = VI(env, 0.998)
 Value_opt = np.array(Value_opt)
+Value_opt_VI = np.array(Value_opt_VI)
 #print(_,display_4room_policy(pi),Value_opt)
 
 Value_opt_mapped = pd.DataFrame([[Value_opt[cell] if cell != -1 else "$\\blacksquare$" for cell in row] for row in env.map])
@@ -243,3 +267,17 @@ print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
 
 display_4room_policy_df = pd.DataFrame(display_4room_policy(pi))
 print(display_4room_policy_df.to_latex( index=False))
+
+Value_opt_mapped = pd.DataFrame([[Value_opt_VI[cell] if cell != -1 else "$\\blacksquare$" for cell in row] for row in env.map])
+print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
+
+display_4room_policy_df = pd.DataFrame(display_4room_policy(pi_VI))
+print(display_4room_policy_df.to_latex( index=False))
+
+Value_opt_mapped = pd.DataFrame([[Value_opt_VI_new[cell] if cell != -1 else "$\\blacksquare$" for cell in row] for row in env.map])
+print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
+
+display_4room_policy_df = pd.DataFrame(display_4room_policy(pi_VI_new))
+print(display_4room_policy_df.to_latex( index=False))
+
+print(n_,n_VI, n_VI_new)
