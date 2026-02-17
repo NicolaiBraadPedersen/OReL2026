@@ -274,10 +274,10 @@ print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
 display_4room_policy_df = pd.DataFrame(display_4room_policy(pi_VI))
 print(display_4room_policy_df.to_latex( index=False))
 
-Value_opt_mapped = pd.DataFrame([[Value_opt_VI_new[cell] if cell != -1 else "$\\blacksquare$" for cell in row] for row in env.map])
-print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
-
-display_4room_policy_df = pd.DataFrame(display_4room_policy(pi_VI_new))
-print(display_4room_policy_df.to_latex( index=False))
-
-print(n_,n_VI, n_VI_new)
+# Value_opt_mapped = pd.DataFrame([[Value_opt_VI_new[cell] if cell != -1 else "$\\blacksquare$" for cell in row] for row in env.map])
+# print(Value_opt_mapped.to_latex(float_format="%.2f", index=False))
+#
+# display_4room_policy_df = pd.DataFrame(display_4room_policy(pi_VI_new))
+# print(display_4room_policy_df.to_latex( index=False))
+#
+print(n_VI, n_VI_new)
