@@ -121,11 +121,11 @@ for mu in mu_0:
     plt.show()
 
 
-FTL_0, FTL_0_se = np.array([run_algo_newx(mu,2000,FTL) for i in range(10)]).mean(axis=0) , np.array([run_algo_newx(mu,2000,FTL) for i in range(10)]).std(axis=0)
-Hedge_0, Hedge_0_se = np.array([run_algo_newx(mu,2000,Hedge_t) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(mu,2000,Hedge_t) for i in range(10)]).std(axis=0)
-Hedge_1, Hedge_1_se = np.array([run_algo_newx(mu,2000,Hedge_t_2) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(mu,2000,Hedge_t_2) for i in range(10)]).std(axis=0)
-Hedge_2, Hedge_2_se = np.array([run_algo_newx(mu,2000,Hedge_T_2) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(mu,2000,Hedge_T_2) for i in range(10)]).std(axis=0)
-Hedge_3, Hedge_3_se = np.array([run_algo_newx(mu,2000,Hedge_T_8) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(mu,2000,Hedge_T_8) for i in range(10)]).std(axis=0)
+FTL_0, FTL_0_se = np.array([run_algo_newx(2000,FTL) for i in range(10)]).mean(axis=0) , np.array([run_algo_newx(2000,FTL) for i in range(10)]).std(axis=0)
+Hedge_0, Hedge_0_se = np.array([run_algo_newx(2000,Hedge_t) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(2000,Hedge_t) for i in range(10)]).std(axis=0)
+Hedge_1, Hedge_1_se = np.array([run_algo_newx(2000,Hedge_t_2) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(2000,Hedge_t_2) for i in range(10)]).std(axis=0)
+Hedge_2, Hedge_2_se = np.array([run_algo_newx(2000,Hedge_T_2) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(2000,Hedge_T_2) for i in range(10)]).std(axis=0)
+Hedge_3, Hedge_3_se = np.array([run_algo_newx(2000,Hedge_T_8) for i in range(10)]).mean(axis=0), np.array([run_algo_newx(2000,Hedge_T_8) for i in range(10)]).std(axis=0)
 plt.plot(FTL_0, label='FTL', color = colors[0])
 plt.plot(FTL_0 + FTL_0_se, label='FTL | se.', linestyle='dashed', color = colors[0])
 plt.plot(Hedge_2, label='Hedge | eta reg.', color = colors[1])
@@ -142,5 +142,5 @@ plt.xlabel('T')
 plt.ylabel('Regret')
 plt.title(f'Hedge vs FTL New x')
 plt.savefig(
-    f'C:\\Users\\nicol\\OneDrive - University of Copenhagen\\Desktop\\4 år\\OReL\\HA2\\Hedge vs FTL {mu} new.png')
+    f'C:\\Users\\nicol\\OneDrive - University of Copenhagen\\Desktop\\4 år\\OReL\\HA2\\Hedge vs FTL new_x.png')
 plt.show()
