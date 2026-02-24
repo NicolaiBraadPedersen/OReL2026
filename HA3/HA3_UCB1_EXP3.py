@@ -61,14 +61,12 @@ if __name__ == '__main__':
         for delta0 in [1/4,1/8,1/16]:
             comp = comparison()
             results = np.array([comp.run_ucb_exp3(delta=delta0, T=10000, K=K0) for i in range(20)])
+            plt.plot(results[:, 1, :].mean(axis=0), label='EXP3') #+ results[:, 0, :].std(axis=0)
             plt.plot(results[:,0,:].mean(axis = 0) , label = 'UCB1') #+ results[:,0,:].std(axis = 0)
-            plt.plot()
-            plt.plot(results[:, 1, :].mean(axis=0) , label = 'EXP3') #+ results[:, 0, :].std(axis=0)
             plt.legend()
             plt.title(f'K = {K0}, delta = {delta0}')
             plt.ylabel('Pseudo Regret')
             plt.xlabel('T')
             plt.show()
-            break
-        break
+
     test = 1
