@@ -1,10 +1,11 @@
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-# below is a personal style for plotting, will only work if the whole repo is cloned
-from utils.plotting import use_earthy_style
-use_earthy_style()
+# below is a personal style for plotting, will only work if the whole repo is cloned. User workaround is added
+if os.environ.get('USERNAME') == 'nicol':
+    from utils.plotting import use_earthy_style
+    use_earthy_style()
 
 class comparison():
     def __init__(self):
@@ -59,18 +60,33 @@ class comparison():
         return p_t
 
 if __name__ == '__main__':
-    #comp = comparison()
 
-    for K0 in [2,4,8,16]:
-        for delta0 in [1/4,1/8,1/16]:
+    for delta0 in [1 / 4, 1 / 8, 1 / 16]:
+        i = 1
+        plt.figure(figsize=[12, 12])
+        for K0 in [2,4,8,16]:
+
+            plt.subplot(2, 2, i)
             comp = comparison()
             results = np.array([comp.run_ucb_exp3(delta=delta0, T=10000, K=K0) for i in range(20)])
-            plt.plot(results[:, 1, :].mean(axis=0), label='EXP3') #+ results[:, 0, :].std(axis=0)
-            plt.plot(results[:,0,:].mean(axis = 0) , label = 'UCB1') #+ results[:,0,:].std(axis = 0)
+            mean_vals = results.mean(axis=0)
+            std_vals_plus = results.mean(axis=0) + results.std(axis=0)
+
+            line, = plt.plot(mean_vals[1, :], label='EXP3 mean')
+            plt.plot(std_vals_plus[1,:], label='EXP3 mean + std', color = line.get_color(), linestyle = 'dashed', alpha = 0.6)
+
+            line, = plt.plot(mean_vals[0, :], label='UCB1 mean')
+            plt.plot(std_vals_plus[0, :], label='UCB1 mean + std', color=line.get_color(), linestyle = 'dashed', alpha = 0.6)
+
             plt.legend()
-            plt.title(f'K = {K0}, delta = {delta0}')
+            plt.title(f'K = {K0}, $\delta$ = {delta0}')
             plt.ylabel('Pseudo Regret')
             plt.xlabel('T')
-            plt.show()
+
+            i += 1
+            print(i)
+
+        plt.tight_layout()
+        plt.savefig(r'C:\Users\nicol\OneDrive - University of Copenhagen\Desktop\4 år\OReL\HA3'+rf'\UCB1_EXP3_{delta0}.png')
 
     test = 1

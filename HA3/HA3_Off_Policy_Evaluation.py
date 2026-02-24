@@ -187,8 +187,11 @@ if __name__ == "__main__":
 
     results_iii = [np.var(lst_CE_OPE), np.var(lst_IS), np.var(lst_WIS), np.var(lst_PDIS)]
 
-    print(results_i)
-    print(results_ii)
-    print(results_iii)
+    res_1 = ", ".join(f"{x:.5f}" for x in results_i)
+    res_2 = ", ".join(f"{x:.5f}" for x in results_ii)
+    res_3 = ", ".join(f"{x:.5f}" for x in results_iii)
+    print(f'results_i = {res_1}')
+    print(f'results_ii = {res_2}')
+    print(f'results_iii = {res_3}')
 
     test = 1

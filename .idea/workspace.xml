@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a6167c5-6ef0-435e-9e72-977a328d813c" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/HA3/HA3_run_all.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HA3/HA3_Off_Policy_Evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/HA3/HA3_Off_Policy_Evaluation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py" beforeDir="false" afterPath="$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plotting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -102,7 +103,7 @@
       <updated>1770710952574</updated>
       <workItem from="1770835508978" duration="2034000" />
       <workItem from="1770837622641" duration="50940000" />
-      <workItem from="1771921270432" duration="31239000" />
+      <workItem from="1771921270432" duration="33819000" />
     </task>
     <task id="LOCAL-00001" summary="HA-1">
       <option name="closed" value="true" />
@@ -272,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1771964004388</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="updates">
+      <option name="closed" value="true" />
+      <created>1771964119094</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1771964119094</updated>
+    </task>
+    <task id="LOCAL-00023" summary="updates">
+      <option name="closed" value="true" />
+      <created>1771964137848</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1771964137848</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +328,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/HA3/HA3_Off_Policy_Evaluation.py</url>
-          <line>193</line>
+          <line>196</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -321,7 +338,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py</url>
-          <line>75</line>
+          <line>91</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
@@ -331,7 +348,7 @@
     <SUITE FILE_PATH="coverage/OReL2026$HA2_gridworld.coverage" NAME="HA2_gridworld Coverage Results" MODIFIED="1771359715844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA2" />
     <SUITE FILE_PATH="coverage/PythonProject$HA2_gridworld.coverage" NAME="HA2_gridworld Coverage Results" MODIFIED="1770974325550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL/HA2" />
     <SUITE FILE_PATH="coverage/PythonProject$HA2_FTL_and_Hedge.coverage" NAME="HA2_FTL_and_Hedge Coverage Results" MODIFIED="1771169700420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL/HA2" />
-    <SUITE FILE_PATH="coverage/OReL2026$HA3_UCB1_EXP3.coverage" NAME="HA3_UCB1_EXP3 Coverage Results" MODIFIED="1771963738687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA3" />
+    <SUITE FILE_PATH="coverage/OReL2026$HA3_UCB1_EXP3.coverage" NAME="HA3_UCB1_EXP3 Coverage Results" MODIFIED="1771965698551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA3" />
     <SUITE FILE_PATH="coverage/PythonProject$HA_1.coverage" NAME="HA-1 Coverage Results" MODIFIED="1770838408506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL" />
     <SUITE FILE_PATH="coverage/PythonProject$Assignment_1.coverage" NAME="Assignment 1 Coverage Results" MODIFIED="1770839773353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL" />
     <SUITE FILE_PATH="coverage/OReL2026$HA2_FTL_and_Hedge.coverage" NAME="HA2_FTL_and_Hedge Coverage Results" MODIFIED="1771352293500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA2" />
