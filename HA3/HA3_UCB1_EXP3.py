@@ -2,6 +2,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# below is a personal style for plotting, will only work if the whole repo is cloned
+from utils.plotting import use_earthy_style
+use_earthy_style()
+
 class comparison():
     def __init__(self):
         pass
