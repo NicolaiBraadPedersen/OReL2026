@@ -174,11 +174,21 @@ if __name__ == "__main__":
     results_ii = [np.abs(V_true - x) for x in results_i]
 
 
-    lst_CE_OPE = lst_IS = lst_WIS = lst_PDIS = []
+    lst_CE_OPE = []
+    lst_IS = []
+    lst_WIS = []
+    lst_PDIS = []
     for i in range(11):
         ope.load_data(i)
         lst_CE_OPE.append( ope.algo_CE_OPE())
         lst_IS.append( ope.algo_IS())
         lst_WIS.append( ope.algo_IS(method = 'Weighted'))
         lst_PDIS.append( ope.algo_IS(method = 'PerDecision'))
+
+    results_iii = [np.var(lst_CE_OPE), np.var(lst_IS), np.var(lst_WIS), np.var(lst_PDIS)]
+
+    print(results_i)
+    print(results_ii)
+    print(results_iii)
+
     test = 1
