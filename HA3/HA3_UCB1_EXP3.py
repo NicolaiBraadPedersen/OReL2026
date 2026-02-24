@@ -72,19 +72,31 @@ if __name__ == '__main__':
             mean_vals = results.mean(axis=0)
             std_vals_plus = results.mean(axis=0) + results.std(axis=0)
 
-            line, = plt.plot(mean_vals[1, :], label='EXP3 mean')
-            plt.plot(std_vals_plus[1,:], label='EXP3 mean + std', color = line.get_color(), linestyle = 'dashed', alpha = 0.6)
+            line, = plt.plot(mean_vals[1, :], label=r'EXP3 $\mu$')
+            #plt.plot(std_vals_plus[1,:], label='EXP3 $\mu + \sigma$', color = line.get_color(), linestyle = 'dashed', alpha = 0.6)
+            plt.fill_between(range(len(mean_vals[1,:])),
+                                   mean_vals[1,:],
+                                   std_vals_plus[1,:],
+                                   color = line.get_color(),
+                                   alpha = 0.4,
+                                   label = r'EXP3 $\mu$ + $\sigma$')
 
-            line, = plt.plot(mean_vals[0, :], label='UCB1 mean')
-            plt.plot(std_vals_plus[0, :], label='UCB1 mean + std', color=line.get_color(), linestyle = 'dashed', alpha = 0.6)
+            line, = plt.plot(mean_vals[0, :], label=r'UCB1 $\mu$')
+            #plt.plot(std_vals_plus[0, :], label='UCB1 $\mu + \sigma$', color=line.get_color(), linestyle = 'dashed', alpha = 0.6)
+            plt.fill_between(range(len(mean_vals[0, :])),
+                             mean_vals[0, :],
+                             std_vals_plus[0, :],
+                             color=line.get_color(),
+                             alpha=0.4,
+                             label=r'UCB1 $\mu$ + $\sigma$')
 
             plt.legend()
-            plt.title(f'K = {K0}, $\delta$ = {delta0}')
+            plt.title(rf'K = {K0}, $\Delta$ = {delta0}')
             plt.ylabel('Pseudo Regret')
             plt.xlabel('T')
 
-            i += 1
             print(i)
+            i += 1
 
         plt.tight_layout()
         plt.savefig(r'C:\Users\nicol\OneDrive - University of Copenhagen\Desktop\4 år\OReL\HA3'+rf'\UCB1_EXP3_{delta0}.png')
