@@ -144,18 +144,24 @@ lst, pi_0 = ce_opo(Q_star_0)
 
 lst_1 = Q_star_0[0,1] - Q_star(pi = pi_0, off_policy=True)
 
+np.random.seed(32)
 plt.plot(lst)
-plt.ylabel('$||Q^* - Q_t||_\infty$')
-plt.xlabel('$\log_10$ transform of time')
-plt.label('Error in estimated Q-value at time t')
+plt.ylabel(r'$||Q^* - Q_t||_\infty$')
+plt.xlabel(r'$\log_{10}$ transform of time')
+plt.title('Error in estimated Q-value at time t')
 plt.xscale('log')
+if os.environ.get('USERNAME') == 'nicol':
+    plt.savefig('C:\\Users\\nicol\\OneDrive - University of Copenhagen\\Desktop\\4 år\\OReL\\HA5\\Q_error.png')
 plt.show()
 
+
 plt.plot(lst_1)
-plt.ylabel('$Q^*(1,right) - Q^{\hat\pi_t}(1,right)')
-plt.xlabel('$\log_10$ transform of time')
-plt.label('Q loss at left bank, for estimated policy')
+plt.ylabel(r'$Q^*(1,right) - Q^{\hat\pi_t}(1,right)')
+plt.xlabel(r'$\log_{10}$ transform of time')
+plt.title('Q loss at left bank, for estimated policy')
 plt.xscale('log')
+if os.environ.get('USERNAME') == 'nicol':
+    plt.savefig('C:\\Users\\nicol\\OneDrive - University of Copenhagen\\Desktop\\4 år\\OReL\\HA5\\Q_leftbank_error.png')
 plt.show()
 
 
