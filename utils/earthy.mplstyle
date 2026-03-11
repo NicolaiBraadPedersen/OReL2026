@@ -68,7 +68,7 @@ lines.markersize        : 5
 ########################
 # Earthy Scientific Color Cycle
 ########################
-axes.prop_cycle: cycler(color=["#18682B", "#724E25", "#8E906B", "#A67C52", "#4B5D67", "#D4A373"])
+axes.prop_cycle: cycler(color=["#144f14", "#D2B48C", "#808080", "#d95f0e", "#FFC0CB"])
 patch.force_edgecolor: True
 patch.linewidth: 3.0
 
