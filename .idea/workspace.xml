@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a6167c5-6ef0-435e-9e72-977a328d813c" name="Changes" comment="updates">
-      <change beforePath="$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py" beforeDir="false" afterPath="$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HA3/HA3_run_all.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HA3/HA3_run_all.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HA5/LunarLanderAssignment.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HA5/LunarLanderAssignment.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -40,9 +40,10 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "133616ff",
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="39TD1IYJ2DUSorVNsZOEEkvL24p" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,6 +58,9 @@
     "Python.HA2_gridworld.executor": "Run",
     "Python.HA3_Off_Policy_Evaluation.executor": "Debug",
     "Python.HA3_UCB1_EXP3.executor": "Run",
+    "Python.HA5.2.executor": "Run",
+    "Python.HA5_OPO_RiverSwim.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -64,18 +68,20 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/nicol/PycharmProjects/PythonProject/OReL",
+    "last_opened_file_path": "C:/Users/nicol/PycharmProjects/PythonProject/HA4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
+    "two.files.diff.last.used.file": "C:/Users/nicol/PycharmProjects/PythonProject/HA5/HA5_OPO_RiverSwim.py",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nicol\PycharmProjects\PythonProject\HA4" />
       <recent name="C:\Users\nicol\PycharmProjects\PythonProject\OReL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -102,7 +108,13 @@
       <updated>1770710952574</updated>
       <workItem from="1770835508978" duration="2034000" />
       <workItem from="1770837622641" duration="50940000" />
-      <workItem from="1771921270432" duration="35865000" />
+      <workItem from="1771921270432" duration="51965000" />
+      <workItem from="1772400299566" duration="5219000" />
+      <workItem from="1772536260745" duration="50000" />
+      <workItem from="1772555399250" duration="11000" />
+      <workItem from="1772650185930" duration="1912000" />
+      <workItem from="1772729365174" duration="16000" />
+      <workItem from="1773132077834" duration="21224000" />
     </task>
     <task id="LOCAL-00001" summary="HA-1">
       <option name="closed" value="true" />
@@ -296,7 +308,63 @@
       <option name="project" value="LOCAL" />
       <updated>1771966734068</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="updates">
+      <option name="closed" value="true" />
+      <created>1771968846187</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1771968846187</updated>
+    </task>
+    <task id="LOCAL-00026" summary="updates">
+      <option name="closed" value="true" />
+      <created>1771972987899</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1771972987899</updated>
+    </task>
+    <task id="LOCAL-00027" summary="updates">
+      <option name="closed" value="true" />
+      <created>1772048297685</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1772048297685</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updates">
+      <option name="closed" value="true" />
+      <created>1772729377220</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1772729377220</updated>
+    </task>
+    <task id="LOCAL-00029" summary="updates">
+      <option name="closed" value="true" />
+      <created>1773132165292</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1773132165292</updated>
+    </task>
+    <task id="LOCAL-00030" summary="updates">
+      <option name="closed" value="true" />
+      <created>1773250720146</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1773250720146</updated>
+    </task>
+    <task id="LOCAL-00031" summary="updates">
+      <option name="closed" value="true" />
+      <created>1773252323650</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1773252323650</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,8 +413,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py</url>
-          <line>103</line>
+          <line>186</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HA3/HA3_UCB1_EXP3.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HA5/HA5_OPO_RiverSwim.py</url>
+          <line>147</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>file://$PROJECT_DIR$/HA5/LunarLanderAssignment.ipynb</url>
+          <line>8</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -355,8 +438,11 @@
     <SUITE FILE_PATH="coverage/OReL2026$HA2_gridworld.coverage" NAME="HA2_gridworld Coverage Results" MODIFIED="1771359715844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA2" />
     <SUITE FILE_PATH="coverage/PythonProject$HA2_gridworld.coverage" NAME="HA2_gridworld Coverage Results" MODIFIED="1770974325550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL/HA2" />
     <SUITE FILE_PATH="coverage/PythonProject$HA2_FTL_and_Hedge.coverage" NAME="HA2_FTL_and_Hedge Coverage Results" MODIFIED="1771169700420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL/HA2" />
-    <SUITE FILE_PATH="coverage/OReL2026$HA3_UCB1_EXP3.coverage" NAME="HA3_UCB1_EXP3 Coverage Results" MODIFIED="1771967823420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA3" />
+    <SUITE FILE_PATH="coverage/OReL2026$HA5_OPO_RiverSwim.coverage" NAME="HA5_OPO_RiverSwim Coverage Results" MODIFIED="1773251392354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA5" />
+    <SUITE FILE_PATH="coverage/OReL2026$HA5_2.coverage" NAME="HA5.2 Coverage Results" MODIFIED="1773176539455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA5" />
+    <SUITE FILE_PATH="coverage/OReL2026$HA3_UCB1_EXP3.coverage" NAME="HA3_UCB1_EXP3 Coverage Results" MODIFIED="1772048253561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA3" />
     <SUITE FILE_PATH="coverage/PythonProject$HA_1.coverage" NAME="HA-1 Coverage Results" MODIFIED="1770838408506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL" />
+    <SUITE FILE_PATH="coverage/OReL2026$test.coverage" NAME="test Coverage Results" MODIFIED="1773174757831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA5" />
     <SUITE FILE_PATH="coverage/PythonProject$Assignment_1.coverage" NAME="Assignment 1 Coverage Results" MODIFIED="1770839773353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OReL" />
     <SUITE FILE_PATH="coverage/OReL2026$HA2_FTL_and_Hedge.coverage" NAME="HA2_FTL_and_Hedge Coverage Results" MODIFIED="1771352293500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA2" />
     <SUITE FILE_PATH="coverage/OReL2026$HA3_Off_Policy_Evaluation.coverage" NAME="HA3_Off_Policy_Evaluation Coverage Results" MODIFIED="1771943235122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HA3" />
