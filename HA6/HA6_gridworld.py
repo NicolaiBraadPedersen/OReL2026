@@ -5,6 +5,7 @@
 
 
 import numpy as np
+import pandas as pd
 
 
 # A simple 4-room grid-world implementation with a grid of 7x7 for a total of 20 states (the walls do not count!).
@@ -13,7 +14,8 @@ import numpy as np
 # The agent is teleported back to the initial state '0' (top-left corner) ,  whenever performing any action in rewarding state '19' (down-right corner).
 class Four_Room_Teleportation():
 
-	def __init__(self):
+	def __init__(self, variant = 'old'):
+		self.variant = variant
 		self.nS = 20
 		nS = self.nS
 		self.nA = 4
@@ -121,6 +123,12 @@ class Four_Room_Teleportation():
 						if ss == 0:
 							self.P[s, a, ss] = 1
 
+						if self.variant == 'new':
+							if ss == s:
+								self.P[s, a, ss] = 0
+							else:
+								self.P[s, a, ss] = 1 / (self.nS - 1)
+
 			
 		# We build the reward matrix R.
 		self.R = np.zeros((nS, 4))
@@ -143,43 +151,69 @@ class Four_Room_Teleportation():
 		return new_s, reward
 
 
-
-
-
-
-
-
-
-
-
-# A naive function to output a readable matrix from a policy on the 4-room environment.
 def display_4room_policy(policy):
 	map = np.array([[-1, -1, -1, -1, -1, -1, -1],
-					[-1,  0,  1,  2,  3,  4, -1],
-					[-1,  5,  6, -1,  7,  8, -1],
-					[-1,  9, -1, -1, 10, -1, -1],
+					[-1, 0, 1, 2, 3, 4, -1],
+					[-1, 5, 6, -1, 7, 8, -1],
+					[-1, 9, -1, -1, 10, -1, -1],
 					[-1, 11, 12, 13, 14, 15, -1],
 					[-1, 16, 17, -1, 18, 19, -1],
 					[-1, -1, -1, -1, -1, -1, -1]])
-	
+
 	res = []
 
 	for i in range(7):
 		temp = []
 		for j in range(7):
 			if map[i][j] == -1:
-				temp.append("Wall ")
+				temp.append("$\\blacksquare$")
 			elif policy[map[i][j]] == 0:
-				temp.append(" Up  ")
+				temp.append("$\\uparrow$")
 			elif policy[map[i][j]] == 1:
-				temp.append("Right")
+				temp.append("$\\rightarrow$")
 			elif policy[map[i][j]] == 2:
-				temp.append("Down ")
+				temp.append("$\\downarrow$")
 			elif policy[map[i][j]] == 3:
-				temp.append("Left ")
-		
+				temp.append("$\\leftarrow$")
+
 		res.append(temp)
 
 	return np.array(res)
 
-	
+
+def VI(env, gamma = 1, eps = 10**(-6)):
+	policy = np.zeros(env.nS, dtype=int)
+	V0 = np.zeros(env.nS)
+	V1 = np.zeros(env.nS)
+	niter = 0
+
+	# The main loop of the PI algorithm.
+	while True:
+		niter += 1
+
+		for s in range(env.nS):
+			for a in range(env.nA):
+				temp = env.R[s, a] + gamma * sum([u * p for (u, p) in zip(V0, env.P[s, a])])
+				if (a == 0) or (temp > V1[s]):
+					V1[s] = temp
+					policy[s] = a
+
+		span = np.max(V1 - V0) - np.min(V1 - V0)
+		# If the policy did not change or the change was due to machine limitation in numerical values return the result.
+		if span < eps:
+			gain = 0.5 * (np.max(V1 - V0) + np.min(V1 - V0))
+			bias_span = np.max(V1) - np.min(V1)
+			return niter, policy, V1, gain, bias_span
+		else:
+			V0 = V1.copy()
+
+if __name__ == '__main__':
+	env = Four_Room_Teleportation()
+	_, policy, _, gain, bias_span = VI(env)
+	print(rf'$g^*$={gain}, sp$(b^*)$={bias_span}')
+	print(pd.DataFrame(display_4room_policy(policy=policy)).to_latex(index=False))
+
+	env = Four_Room_Teleportation(variant='new')
+	_, policy, _, gain, bias_span = VI(env)
+	print(rf'$g^*$={gain}, sp$(b^*)$={bias_span}')
+	print(pd.DataFrame(display_4room_policy(policy=policy)).to_latex(index=False))
